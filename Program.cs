@@ -18,7 +18,21 @@ namespace Commandos
 
             Weapon MyWeapon = new Weapon("Tavor", "Israel", 13);
 
-            //Console.WriteLine(first.SayName("Colonel"));
+            AirCommando second = new AirCommando(
+                "john",
+                "TheEagle",
+                new string[] { "Hammer", "chisel", "rope", "bag", "water bottle" },
+                "Hidden"
+                );
+
+            SeaCommando thirt = new SeaCommando(
+                "Bob",
+                "TheShark",
+                new string[] { "Hammer", "chisel", "rope", "bag", "water bottle" },
+                "Swim"
+                );
+
+            //Console.WriteLine(first.SayName("Colonel"));  
             //Console.WriteLine(first.SayName("General"));
             //Console.WriteLine(first.SayName("Lutennet"));
 
@@ -27,11 +41,11 @@ namespace Commandos
 
             //MyWeapon.Shoot();
 
-            Console.WriteLine(first.CodeName);
+            //Console.WriteLine(first.CodeName);
 
-            first.CodeName = "TheTitan";
+            //first.CodeName = "TheTitan";
 
-            Console.WriteLine(first.CodeName);
+            //Console.WriteLine(first.CodeName);
         }
     }
 }
