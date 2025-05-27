@@ -11,7 +11,7 @@ namespace Commandos
     {
         private string Name;
 
-        private string CodeName;
+        public string CodeName { get; set; }
 
         public string[] Tools;
 
