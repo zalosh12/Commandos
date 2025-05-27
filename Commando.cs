@@ -9,9 +9,9 @@ namespace Commandos
 {
     internal class Commando
     {
-        public string Name;
+        private string Name;
 
-        public string CodeName;
+        private string CodeName;
 
         public string[] Tools;
 
@@ -23,6 +23,19 @@ namespace Commandos
             CodeName = codeName;
             Tools = tools;
             Status = status;
+        }
+
+        public string SayName(string commanderRank)
+        {
+            switch (commanderRank)
+            {
+                case "General":
+                    return Name;
+                case "Colonel":
+                    return CodeName;
+                default:
+                    return "Classified";
+            }
         }
 
         public void Walk()

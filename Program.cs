@@ -18,6 +18,9 @@ namespace Commandos
 
             Weapon MyWeapon = new Weapon("Tavor", "Israel", 13);
 
+            Console.WriteLine(first.SayName("Colonel"));
+            Console.WriteLine(first.SayName("General"));
+            Console.WriteLine(first.SayName("Lutennet"));
             first.Walk();
             first.Attack();
 
