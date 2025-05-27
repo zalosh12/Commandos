@@ -10,6 +10,18 @@ namespace Commandos
     {
         static void Main(string[] args)
         {
+            Commando first = new Commando(
+                "Elazar",
+                "TheShooter",
+                new string[] { "Hammer", "chisel", "rope", "bag", "water bottle"},
+                "Walk" );
+
+            Weapon MyWeapon = new Weapon("Tavor", "Israel", 13);
+
+            first.Walk();
+            first.Attack();
+
+            MyWeapon.Shoot();
         }
     }
 }
