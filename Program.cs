@@ -10,42 +10,36 @@ namespace Commandos
     {
         static void Main(string[] args)
         {
-            Commando first = new Commando(
-                "Elazar",
-                "TheShooter",
-                new string[] { "Hammer", "chisel", "rope", "bag", "water bottle"},
-                "Walk" );
 
+            //create a list of commando soldiers 
             Weapon MyWeapon = new Weapon("Tavor", "Israel", 13);
 
-            AirCommando second = new AirCommando(
-                "john",
-                "TheEagle",
-                new string[] { "Hammer", "chisel", "rope", "bag", "water bottle" },
-                "Hidden"
-                );
+            List<Commando> Soldiers = new List<Commando> {
+            new Commando("Elazar","TheShooter","Walk" ),
+            new AirCommando("john", "TheEagle","Hidden" ),
+            new SeaCommando("Bob","TheShark","Swim" )};
 
-            SeaCommando thirt = new SeaCommando(
-                "Bob",
-                "TheShark",
-                new string[] { "Hammer", "chisel", "rope", "bag", "water bottle" },
-                "Swim"
-                );
 
-            //Console.WriteLine(first.SayName("Colonel"));  
-            //Console.WriteLine(first.SayName("General"));
-            //Console.WriteLine(first.SayName("Lutennet"));
+            //show the information of soldiers
+            foreach( Commando o in Soldiers)
+            {
+                Console.WriteLine(o.SayName("General") );
+                Console.WriteLine(o.CodeName);
+                Console.WriteLine(o.Status);
+                Console.WriteLine(string.Join(", ",o.Tools));
+                Console.WriteLine();
 
-            //first.Walk();
-            //first.Attack();
+            }
 
-            //MyWeapon.Shoot();
+            //polymorphysm show tha attack function 
+            foreach(Commando soldier in Soldiers)
+            {
+                soldier.Attack();
+            }
 
-            //Console.WriteLine(first.CodeName);
 
-            //first.CodeName = "TheTitan";
 
-            //Console.WriteLine(first.CodeName);
+        
         }
     }
 }

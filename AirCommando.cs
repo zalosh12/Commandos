@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace Commandos
 {
-    public class AirCommando: Commando
+    internal class AirCommando: Commando
     {
-        public AirCommando(string name, string codeName, string[] tools, string status) 
-            : base(name, codeName, tools, status)
+        public AirCommando(string name, string codeName,string status) 
+            : base(name, codeName,status)
         {
+        }
+
+        public override void Attack()
+        {
+            Console.WriteLine($"The air commando {CodeName} attacks");
         }
 
         public void Parachute()
         {
-            Console.WriteLine("The soldier parachute");
+            Console.WriteLine($"The soldier {CodeName} parachute");
             Status = "Parachute";
         }
     }

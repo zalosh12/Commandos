@@ -8,9 +8,14 @@ namespace Commandos
 {
     internal class SeaCommando : Commando
     {
-        public SeaCommando(string name, string codeName, string[] tools, string status) : 
-            base(name, codeName, tools, status)
+        public SeaCommando(string name, string codeName, string status) : 
+            base(name, codeName,status)
         {
+        }
+
+        public override void Attack()
+        {
+            Console.WriteLine($"the sea commando {CodeName} attacks");
         }
 
         public void Swim()

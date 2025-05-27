@@ -13,15 +13,14 @@ namespace Commandos
 
         public string CodeName { get; set; }
 
-        public string[] Tools;
+        public string[] Tools { get; } =  { "Hammer", "chisel", "rope", "bag", "water bottle" };
 
         public string Status;
 
-        public Commando(string name,string codeName, string[] tools,string status)
+        public Commando(string name,string codeName,string status)
         {
             Name = name; 
             CodeName = codeName;
-            Tools = tools;
             Status = status;
         }
 
@@ -50,9 +49,9 @@ namespace Commandos
             Status = "Hidden";
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
-            Console.WriteLine($"The soldier {CodeName} Attacks");
+            Console.WriteLine($"The soldier {CodeName} attacks");
         }
 
 
